@@ -1,0 +1,93 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>The inspiration for the design of the course module</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>35b3c230-284c-4546-8d0b-06786fdb35d1</md:uuid>
+</metadata>
+  <content>
+
+<section id="CourseInspiration">
+<title> Inspiration for the Module </title>
+<para id="para1">
+The design of this course module is inspired by the following quote from Nobelist Stanley Fields in Science:February 16, 2001:1221-1224:
+<quote display="block" id="idp2365712">
+ Deciphering how a mere  <m:math><m:apply><m:power/><m:cn>10</m:cn><m:cn>7</m:cn></m:apply></m:math>
+nucleotides result in a yeast cell, let alone how <m:math><m:apply><m:times/><m:cn>3</m:cn><m:apply><m:power/><m:cn>10</m:cn><m:cn>9</m:cn></m:apply></m:apply></m:math> nucleotides result in a human -- cannot begin until the genes have been annotated. This step includes figuring out the proteins these genes encode and what they do for a living. But understanding how all of these proteins collaborate to carry out cellular processes is the real enterprise at end.</quote>
+The quest, indeed, is for the wiring diagrams of life; particularly how they are altered in diseased cells. A fine example is the well-known cancer subway map by William C. Hahn and Robert A. Weinberg published in Nature Reviews Cancer in 2002. 
+</para>
+
+<figure id="figure-01">
+	    <title>The Cancer Subway Map</title>
+	    <media id="idp1489264" alt=""><image src="../../media/map.gif" mime-type="image/gif" height="300" width="300"/></media>
+	    <caption>The Cancer Subway Map (from http://www.nature.com/nrc/poster/subpathways/). </caption>
+</figure> 
+
+</section>
+
+<section id="biology">
+<title>Biology in the 21st century </title>
+<para id="para2">Biology is awash in data today. We have ready access to the sequences of the human and other genomes, structures for several thousand proteins, sequences for over 1.5 million proteins, and information on thousands of protein-protein interactions (with over a billion interactions predicted). High-throughput assays such as microarrays, flow cytometry, SELDI-TOF spectra, cell-level imaging, and array CGH give us unprecedented access to the functioning of cells. All of this data needs to be interpreted to reveal models of cellular function so that we can understand the molecular basis of disease, and design appropriate therapeutic interventions. Data driven exploration of theories is the standard scientific paradigm in modern biology. However, these new technologies have accelerated the volume and pace at which data can be gathered, requiring significant use of computation. Further, it has allowed the focus of research to shift from individual components of a cell to system-level analysis. The situation is depicted nicely in the following cartoon taken from the Fields article in Science:February 16, 2001:1221-1224.</para>
+<figure id="figure-02">
+	    <title>Fishing from the molecular biology pond.</title>
+	    <media id="idm3961120" alt=""><image src="../../media/fishing.gif" mime-type="image/gif"/></media>
+	    <caption>The new world of computational biology (from http://www.sciencemag.org/cgi/content/full/291/5507/1221/F1) </caption>
+</figure>
+
+</section>
+
+<section id="ML">
+<title>Statistical Machine Learning</title>
+<para id="element-651">What is statistical machine learning? It is the science of understanding complex systems (such as cells) by actively gathering data from them,  synthesizing the data using prior knowledge (if any) of the systems to form models, and using the models to predict responses of the system to interventions. The fundamental questions in machine learning are:
+<list id="questions1" list-type="bulleted">
+<item> Feature Selection: What aspects of the system should be observed?</item>
+<item> Model Selection: What class of models need to be built from observed data and prior knowledge?</item>
+<item> Model validation: How do we evaluate the efficacy of the learned models? </item>
+</list></para><figure id="element-992"><title> Statistical Machine Learning </title>
+ <media id="idm3738960" alt=""><image src="../../media/ml.PNG" mime-type="image/png"/></media>
+ <caption>Observe complex systems and build models to predict their response to interventions. </caption></figure>
+</section>
+
+<section id="theprobs">
+<title> Three problems from computational biology</title>
+
+<para id="element-834">The short course focuses on three central problems in computational biology that are at three different levels of abstraction.
+<list id="problem-list" list-type="bulleted">
+<item> Computational Genefinding: Given a DNA sequence, find and annotate genes in it.</item>
+<item> Molecular fingerprinting of disease: Given micro-RNA expression levels in normal and diseased cells, find biologically significant genes that are differentially expressed.</item>
+<item>Learning signaling and regulatory networks: Given flow cytometry data from normal and diseased cells, learn signaling networks from them.</item>
+</list></para><para id="element-640">Here is the computational genefinding problem cast in the framework of statistical machine learning. The observational data are annotated stretches of a genome, and the models learned are Hidden Markov models which are sequential models for labeling new DNA segments.
+<figure id="genefind"><title> Computational Genefinding</title>
+<media id="idm1430128" alt=""><image src="../../media/genefind.PNG" mime-type="image/png"/></media>
+<caption> Computational genefinding as a statistical machine learning problem. </caption>
+</figure>
+</para> 
+
+<para id="mol-para">Here is the molecular fingerprinting or the biomarker discovery problem cast in the framework of statistical machine learning. The observational data are the mRNA or proteomic expression data from diseased and normal cells, and the model is a classifier that discriminates between them, and identifies the key genes or proteins that are key to classification.
+<figure id="molfind"><title> Molecular fingerprinting of disease</title>
+<media id="idm1453504" alt=""><image src="../../media/molfing.PNG" mime-type="image/png"/></media>
+<caption> Molecular fingerprinting of disease as a statistical machine learning problem. </caption>
+</figure>
+</para><para id="element-110">Here is the problem of learning cell signaling networks from flow cytometry data cast as a statistical machine learning problem. The observational data are the measurements at a given time of the levels of signaling molecules in a cell, prior knowledge could be known interactions between the molecules, and the predictive model learned in a signaling network that is the best fit to the data. Therapeutic interventions can then be planned on the learned model. Since there are tremendous individual variations in cells with cancer, an ab-initio technique for inferring signaling pathways directly from observational data can pave the way for the era of personalized cancer therapy.
+<figure id="idm10713296">
+<title>Learning signaling networks from data.  </title>
+<media id="idm11418608" alt=""><image src="../../media/flow.PNG" mime-type="image/png"/></media>
+<caption>Learning cell signaling networks from data.</caption>
+</figure></para><para id="element-766">Three statistical machine learning algorithms will be introduced in the context of these three problems.
+<list id="methods" list-type="bulleted"><item> Hidden Markov models and variants. </item>
+<item> k-NN classifiers and support vector machines. </item>
+<item> Bayesian networks: learning parameters and structure.</item>
+</list></para>
+
+</section>
+<section id="obj">
+<title> Module Objectives </title>
+<para id="obj-para">The module objectives are:
+<list id="obj-list" list-type="bulleted"><item> To show how to handle heterogeneous biological data, how to formulate biological problems in the statistical machine learning framework, and how to choose appropriate algorithms for these problems. </item>
+<item> To cover the basics of supervised and sequential machine learning algorithms with particular focus on Hidden Markov Models, k-NN and SVM classifiers, and Bayesian networks.</item>
+<item> To provide opportunities to apply these methods in the context of real data (human chromosome 22, prostate cancer gene expression data, and flow cytometry data from T-cell signaling).</item>
+
+</list>
+
+</para>
+</section>
+  </content>
+  
+</document>

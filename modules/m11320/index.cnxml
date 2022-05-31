@@ -1,0 +1,79 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>OLD * Genetics Background</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>5677f9ea-80f1-4c6f-ba90-462ba02797a7</md:uuid>
+</metadata>
+
+  <content>
+    <para id="para1"> The most naive picture of the eukaryotic genome is a long string of linear DNA balled up somewhere inside the cell.  This formulation fails on several important grounds: first, although DNA is a linear molecule, it is not necessarily accessed in a linear fashion; second, DNA has a very significant secondary structure, it is not simply balled up at random; and third because DNA does not act in isolation, it is immersed in the context of the cell's nucleus where numerous proteins and epigenetic processes interact with the DNA to regulate gene expression.
+    </para>   
+  
+    <para id="para2"> Let's begin by discussing the in vivo structure of DNA in a typical eukaryotic cell.  A molecule of DNA is composed of two antiparallel and complimentary strands of deoxyribonucleicacid.  Antiparallel means that the two strands have opposite chemical polarity, or, stated another way, their sugar-phosphate backbones run in opposite directions.  Direction in nucleic acids is specified by referring to the carbons of the ribose ring (ribose is a sugar) in the sugar-phosphate backbone of DNA.  5' specifies the the 5th carbon in the ribose ring, counting clockwise from the oxygen molecule, and 3' specifies the 3rd carbon in the ring.  Direction of, and in reference to, DNA molecules is then specified relative to these carbons.  For example, transcription, the act of transcribing DNA to RNA for eventual expression, always occurs in the 5' to 3' direction.  Nucleic acid polymerization cannot occur in the opposite direction, 3' to 5', because of the difference in chemical properties between the 5' methyl group and the 3' ring-carbon with an attached hydroxyl group.
+    </para>   
+
+<figure id="helix">
+<title> DNA Helix </title>
+<media id="idm775552" alt=""><image src="../../media/dnahelix.gif" mime-type="image/gif"/></media>
+</figure>  
+
+    <para id="para3"> The basic structure of DNA can be divided into two portions: the external sugar-phosphate backbone, and the internal bases.  The sugar-phosphate backbone, as its name implies, is the major structural component of the DNA molecule.  It is the external portion of the DNA molecule because it is highly polar, and thus hydrophillic (meaning it likes to be immersed in water).  Correspondingly, the interior bases of the DNA molecule are non-polar and hydrophobic.  This duality has a very stabilizing effect on the overall structure of the DNA double helix: the hydrophobic core of the DNA molecule 'wants' to be hidden inside the sugar-phosphate backbone which acts to isolate it from the polar water molecules; thus there is a strong hydrophobic pressure gluing two molecules of DNA together.
+           </para>   
+  
+    <para id="para4">
+       There are four bases in DNA: adenine (A), guanine (G), thymine (T), and cytosine (C).  In RNA uracil (U) is found in place of thymine (T).  Inside a DNA molecule these bases pair up, A to T and C to G, forming hydrogen bonds that further serve to stabilize the DNA molecule.  Because the interior bases pair up in this manner, we say the DNA double helix is complimentary.  It is the sequence of these bases inside the DNA molecule that we refer to as the genetic code.
+	</para>
+
+<figure id="helix2">
+<title> DNA Structure </title>
+<media id="idm830368" alt=""><image src="../../media/dnastruct1.gif" mime-type="image/gif"/></media>
+</figure>  
+ 
+    <para id="para5"> At this point we now have a good picture of the chemical structure of the DNA molecule, now we need to begin placing it in the context of the cell.  A typical eukaryotic chromosome contains from 1 to 20 cm of DNA.  However, during metaphase of mitosis and meiosis, this DNA is packaged in a chromosome with a length of only 1 to 10 um.  How is this amazing density achieved inside the cell?
+    </para>   
+  
+    <para id="para6"> DNA in the cell exists packed into a dense and regular structure called chromatin.  Chromatin is composed of DNA, proteins, and a small amount of RNA.  The proteins found in chromatin largely consist of histones, a basic protein which is positively charged at neutral pH, and nonhistone chromosomal proteins which are largely acidic at neutral pH.  Histones have been highly conserved in all eukaryotes.  There are five major histone types, called H1, H2a, H2b, H3, and H4, and which exist in specific molar ratios within the chromatin.  Histones bind together with the DNA to form the basic structural subunit of chromatic, small ellipsoidal beads called nucleosomes which are around 11nm in diameter and 6nm high.  Each nucleosome contains 146 nucleotide pairs which wrap around the histon protein complex 1 and 3/4 turns.  The nucleosome complexes give the DNA molecula a packaging ratio of 6.
+    </para>
+
+<figure id="histone">
+<title> Histones </title>
+<media id="idm451936" alt=""><image src="../../media/histone.gif" mime-type="image/gif"/></media>
+</figure>  
+
+  
+    <para id="para7"> Beyond the nucleosome, there are two more levels of  structural packaging.  The second level of packing is the coiling of the nucleosome beads into a helical structure called the 30 nm fiber that is found in both interphase chromatin and mitotic chromosomes. This structure increases the packing ratio to about 40. The final packaging occurs when the fiber is organized in loops, scaffolds and domains that give a final packing ratio of about 1000 in interphase chromosomes and about 10,000 in mitotic chromosomes.
+    </para>   
+ 
+    <para id="para8"> One important note is that DNA is not always packed into the super-dense chromosome structures evident during mitotic and meiotic replication.  During interphase, or the general not-currently-reproducing phase of the cell where most of a cell's work is done, the chromatin, while still highly dense, is about 1/10 as dense as during cellular replication.  This is important because it is believed that the highly-dense chromatic structure of DNA sterically inhibits transcription and thus gene expression.  In order for genes to be expressed the chromatin structure must be relaxed so that the transcriptional proteins can gain access to the DNA molecule.
+    </para>   
+  
+    <para id="para9">
+       Now that we have a good grasp on the basic structure of DNA as a molecule, as well as in vivo, lets move on to the mechanisms of gene expression.  The Central Dogma of genetics is: DNA is transcribed to RNA which is translated to protein.  Protein is never back-translated to RNA or DNA, and except for retroviruses, DNA is never created from RNA.  Furthermore, DNA is never directly translated to protein.  DNA to RNA to protein.    </para>   
+ 
+    <para id="para10">
+       DNA is the long term, stable, hard-copy of the genetic material; by way of analogy it is similar to the information on a computers hard-disk drive.  RNA is a temporary intermediary between the DNA and the protein making factories, the ribosomes.  To further extend our computer analogy, RNA could be compared to information in a cache, in that the lifetime of RNA is much shorter than that of either DNA or the average protein, and that RNA serves to carry information from the genome, located in the nucleus of the cell, to the ribosomes, which are located outside of the nucleus either in the cytosol or on the endoplasmic reticulum (which is a large set of folded membranes proximal to the nucleus that help manufacture proteins for extra-cellular export).  To complete our analogy, proteins could be viewed as the programs of the cell.  They are the physical representation of the abstract information contained within the genome.  However, one caveat is that RNA does have some enzymatic activity and has other functions besides ferrying messages between the DNA and the ribosomes.
+    </para>   
+  
+    <para id="para11">
+       Transcription is the process of creating RNA from DNA.  Transcription is also the point at which most of the regulation of gene expression occurs and because of this it is a very complex process, especially with regard to its initiation.  To say that DNA is transcribed to RNA is a nice (over)simplification, but we need to delve a little deeper into the details to really appreciate what is going on during transcription.  A more complete view of transcription includes five steps: 1) transcription of DNA to pre-mRNA, 2) a 7-methyl guanosine cap is added to the 5' end of the transcript, 3) a poly(A) tail is added to the 3' end of the transcript, 4) the introns are spliced out of the pre-mRNA, which finally yields, 5) the mRNA transcript proper.    </para>   
+  
+    <para id="para12">
+Because the first step, the initial transcription of DNA to pre-mRNA, is the most involved, I am going to hold off on discussing it for a moment and expand on steps 2-5 first.  (2) The addition of the 5' 7-MG cap is important for two reasons: the 5' caps are recognized by protein factors that initiate translation, and it also helps protect the transcript from nucleases.  Nucleases are very common in the cell and because of this unprotected RNA has a very short half-life inside the cell.  Nucleases are actually so common that working with RNA in the laboratory can be quite difficult because the samples have a tendency to disintegrate into useless bits.  (3) The poly(A) tails are formed in a two step process: an endonulcease cleaves around 1000-2000 non-coding bases from the 3' end of the pre-mRNA transcript and then poly(A) polymerase adds 20-200 AMP molecules to the 3' end of the transcript.  The poly(A) tail is important in the cellular transport of the mRNA transcript and, like the 5' cap, also helps to stabilize the mRNA transcript.  
+    </para>   
+  
+    <para id="para13">
+Once the 5' cap and the poly(A) tail have been added, only one step remains for the pre-mRNA transcript to be complete and graduate to mRNA status: splicing.  Eukaryotic genes contain two types of transcribed regions: introns and exons.  Exons are the regions of the genome that contain actual coding information.  Introns are non-coding, meaning that intronic sequences are never translated to protein, in fact they are never included in the final processed mRNA transcript.   Splicing is the process of removing introns from the pre-mRNA transcript to produce an exon-only mRNA molecule, which is then shipped off for translation.  Generally, eukaryotic mRNAs are considered to monogenic.  However, up to one fourth of the transcripts in C. elegans have been show to be multi-genic (i.e. they contain exons from multiple genes).      </para>   
+  
+    <para id="para14">
+A further complication of the splicing process is that mRNA can undergo alternative splicing.  To illustrate this let's imagine a gene that has 3 exons and two introns.  From this gene, three different final transcripts are possible.  In all transcripts the two introns are going to be removed, however, the cell can combine the exons however it wants as long as the original order is maintained.  This means that for this example the possible mRNA transcripts include: Exon1-Exon2, Exon1-Exon3, and Exon1-Exon2-Exon3; however, Exon3-Exon1 is not possible because the exons are out of order.      </para>   
+  
+    <para id="para15"> An interesting side note is that some introns are capable of self-splicing, that is they can politely remove themselves without the intervention of any proteins.  This is significant mainly because it is a significant counter example to the idea that RNA is an inert transcript and action is soley the domain of proteins.  RNAs should really be viewed as having both enzymatic properties and abstract information-carrying ability.  Because of this many people believe that RNA was the original genetic molecule and that DNA and proteins evolved later in the game.
+    </para>   
+  
+    <para id="para16">
+       Alternative splicing is a very important and powerful tool.  To understand the benefit alternative splicing gives the cell we need to understand something about proteins.  Proteins can be understood as containing modularized functional units.  These functional units can be active sites on enzymes, large structural motifs such as beta-sheets or alpha-helices, or motifs that direct the eventual destination of expressed proteins.  A good example of an alternatively spliced pre-mRNA transcript is the mouse IgM immuoglobulin transcript.  IgM exists in two forms: excreted and membrane bound.  These two forms of the protein differ in the only in the C-terminus: the secreted protein has a secreted terminus motif while the membrane-bound protein has a C-terminal membrane anchor region.  Both products come from the same pre-mRNA, but alternative splicing includes either the terminal exon that creates the excreted form of IgM or the membrane-bound form of IgM.    </para>   
+  
+    <para id="para17">
+This is a good time to take a step back from our discussion, take a deep breath, and summarize what we have covered so far.  (1) DNA exists as a double stranded helix that is both complimentary and antiparrallel.  (2) DNA in vivo exists in a very compact and regular structure of nucleosomes, 30nm fibers of braided nucleosomes, and loops of fibers.  (3) The central dogma of genetics: DNA is transcribed to RNA, which is then translated to proteins.  (4) DNA is the stable, long-term form of genetic information.  (5) RNA is (mostly) an intermediary between DNA and the protein-making-factories, ribosomes. (6) RNA transcription is not nearly as simple as the central dogma might lead you to believe.  Which leads us to the point I put off earlier: how is transcription initiated in the eukaryotic genome?    </para>   
+  </content>
+
+
+</document>

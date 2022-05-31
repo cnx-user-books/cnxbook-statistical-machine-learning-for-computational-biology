@@ -1,0 +1,252 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Computational Genefinding</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>9b99e2ed-9865-46dd-92a8-39ad69766bd5</md:uuid>
+</metadata>
+  <content>
+
+<section id="intro-to-genefinding">
+<title>The human genome: chromosomes and genes </title>
+<para id="para1">In 1953 Watson and Crick unlocked the structure of the <link url="http://www.nature.com/nature/dna50/watsoncrick.pdf">DNA
+      molecule</link> and set into motion the modern study of
+      genetics.
+      This advance allowed our study of life to transcend the wet
+      realm of proteins, cells, organelles, ions, and
+      lipids, and move up into more abstract methods of analysis.
+      By discovering the basic structure of DNA we had received our
+      first glance into the information-based realm locked inside
+      the genetic code.
+
+      
+</para>
+
+<para id="element-992">The human genome contains 3 billion chemical nucleotide bases (A,C,
+  T and G). About 30,000 genes are estimated to be in the human
+  genome. The human genome has physical three-dimensional
+  structure. The genome is 6 feet (2 meters) in length and is packed
+  in the nucleus of our cells into a structure which is only 0.0004
+  inches across (the head of a pin). The genome is divided among 24
+  chromosomes (22 pairs of autosomes and one pair of sex chromosomes
+  (X and Y)), and that genes lie on specific chromosomes. Human
+  chromosomes are arranged according to size with Chromosome 1 being
+  the largest, and the Y chromosome being the smallest. Matt Ridley's
+  fascinating book <link url="http://www.amazon.com/Genome-Matt-Ridley/dp/0060932902">Genome</link>
+  gives a great introduction to our chromosomes and the genes they
+  contain. Chromosome 1 is believed to have 2968 genes, while the Y
+  chromosome has 231 genes. To learn more about chromosomes, visit
+  <link url="http://www.ncbi.nlm.nih.gov/projects/genome/genemap99/">GeneMap99</link>,
+  a site maintained by the NCBI. Here is a diagrammatic representation
+  of the 24 chromosomes.  
+
+  <figure id="chromosome"><title>Human
+  chromosomes</title>
+  <media id="idp579408" alt=""><image src="../../media/chromosomes.gif" mime-type="image/gif" height="300" width="300"/></media>
+  <caption>Representation of the  24 chromosomes of the human male.  </caption>
+  </figure>
+
+  Here is what a chromosome looks like under an electron microscope.
+  <figure id="chromosomes-pic"><title>Human chromosomes</title>
+  <media id="idp9348320" alt=""><image src="../../media/01 Human Chromosome.JPG" mime-type="image/jpeg" height="300" width="250"/></media>
+  <caption>Human Chromosome 12 under an electron microsocope.</caption>
+  </figure>
+
+</para>
+
+<para id="delete_me">The average human gene contains about 3000
+    bases. Sizes of human genes vary greatly. The largest known human
+    gene is dystrophin (a muscle protein) at 2.4 million bases. The
+    smallest genes are a little over a hundred base pairs long. Less
+    than 2% of the genome codes for proteins. Repeated sequences that
+    are not involved in coding for proteins (sometimes called "junk
+    DNA") make up at least 50% of the human genome. These repetitive
+    sequences play an important role in chromosome structure and
+    dynamics. Over time, these repeats are believed to reshape the
+    genome by rearranging it, creating entirely new genes, and
+    modifying and reshuffling genes. Surprisingly, genes are not
+    distributed uniformly through the human genome. Genes appear to be
+    concentrated in sections of the genome with high GC content, with
+    vast areas of non-coding DNA in between. There are long stretches
+    of C and G repeats adjacent to gene-rich areas. These CpG islands
+    are believed to regulate gene activity, and they serve as markers
+    for gene-rich locations on the genome. We do not yet know the
+    function of over 50% of the discovered genes. A great site to
+    learn more about DNA is <link url="http://www.dnai.org">the DNAi
+    site </link> maintained by the HHMI.</para>
+
+</section>
+
+<section id="genefinding">
+<title>Computational Genefinding </title>
+
+<para id="para-2">
+	
+What is computational genefinding? Simply put, it is the development
+of computational procedures to locate protein coding regions in
+unprocessed genomic DNA sequence data.  In reality however,
+pinpointing the mere location of a gene is part of a much larger
+challenge.  The eukaryotic gene is a complicated and highly studied
+beast composed of a  multitude of small coding regions and
+regulatory elements hidden amidst tens of thousands of base pairs of
+intronic and non-signal DNA.  In order to accurately predict gene
+locations we must first understand how the different functional
+components interact to create the dynamic and complex phenomena we
+have come to understand as 'a gene'.
+
+
+</para>
+
+<para id="para-3">Thus genefinding is a little bit of a misnomer: in order to find genes we
+must first understand the content and structure of the signal the
+genes present to the cell's genetic machinery, and in doing this we
+must answer much broader questions than the seemingly facile question,
+"Where are the genes?"  The goal of genefinding then is not simple
+gene prediction, but accurate modeling of the signal genes present to
+the cell.  Furthermore, because such information does not exist in a
+vacuum separate from it's interpretation, implicit in the assumption
+of the ability to model the genetic signal is a furthering of our
+capacity to understand the deciphering of the genetic signal and our
+understanding of the inner workings of the cell itself.
+
+</para>
+
+</section>
+
+<section id="approaches">
+<title> Genefinding in prokaryotic genomes </title> 
+
+<para id="element-159">There are two basic approaches to gene finding: ab-initio and comparative. Ab-initio methods use statistical properties of the given genome, while comparative methods use annotations from previously analyzed genomes as an additional input. We will begin our discussion of gene finding with ab-initio methods as applied to simpler prokaryotic genomes. Examples of such genomes include H. influenzae (the influenza virus). Over 70% of H. influenzae codes for proteins. Genes in prokaryota are contiguous stretches of base pairs with no intronic breaks. There are untranslated regions (UTRs) that flank both ends of a gene: the 5' (5-prime) and 3' (3-prime end). Genes are directional -- they are read from the 5' to the 3' end. There are genes on both strands of the DNA double helix. Each gene starts with the amino acid methionine, specified by the three letter codon ATG. ATG is called the start codon. The end of a gene is signalled by one of three stop codons (TAA, TAG, TGA). The start codon signals  the ribosomal machinery to start translating the bases in composites of three into amino acids until the stop codon is reached. Gene finding in prokaryota reduces to the problem of finding stretches of the genome with a  start codon and a stop codons with no intervening stop codons. Such a stretch is called an open reading frame or ORF. 
+
+</para>
+
+<para id="ORF-para">
+
+Given a sequence from {A,C,G,T}*, an open reading frame (ORF) is any subsequence that starts with the codon ATG and ends with a stop codon (TAA, TAG, TGA) with no stop codons in between. 
+ORF finding algorithms are based on the following simple idea.
+Since
+coding regions are terminated by stop
+codons, one needs to to look for long stretches of bases without
+a stop codon. Once a stop codon is found,
+we work backward to find the start codon
+corresponding to the gene. Why do we look for long stretches without stop codons?
+ If nucleotide bases were drawn uniformly
+at random, then a stop codon is expected
+once every 64/3 (about 21)codons, or about 63 base pairs.  By selecting an appropriate length threshold t (typically greater than 210 bases or 70 amino acids), we reduce the likelihood of picking a random sequence with a stop codon rather than an actual coding region.
+Modifications to this basic algorithm to handle very short genes and
+overlapping genes have been developed. The most successful method for finding coding regions in prokaryotic genomes is one based on interpolated Markov models emboded in the program GLIMMER. It is available <link url="http://cbcb.umd.edu/software/glimmer">here</link>. A 2007 Bioinformatics paper details how to use this tool. 
+
+</para>
+
+<para id="influenza-example">
+Here is a 1151 base pair segment of the Influenza B virus taken from the Entrez database. This segment has two genes: base pair 4 to 750, and 750 to 1079.
+The start and stop codons for the two genes are marked with capital letters below.
+
+<code display="block" id="idp1466544">
+1    aaaATGtcgc tgtttggaga cacaattgcc tacctgcttt cattgacaga agatggagaa
+61   ggcaaagcag aactagcaga aaaattacac tgttggttcg gtgggaaaga atttgaccta
+121  gactctgcct tggaatggat aaaaaacaaa agatgcttaa ctgatataca aaaagcacta
+181  attggtgcct ctatctgctt tttaaaaccc aaagaccagg aaaggaaaag aagattcatc
+241  acagagcctc tatcaggaat gggaacaaca gcaacaaaaa agaaaggcct gattctagct
+301  gagagaaaaa tgagaagatg tgtgagcttt catgaagcat ttgaaatagc agaaggccat
+361  gaaagctcag cgctactata ttgtctcatg gtcatgtacc tgaatcctgg aaattattca
+421  atgcaagtaa aactaggaac gctctgtgct ttgtgcgaga aacaagcatc acattcacac
+481  agggctcata gcagagcagc gagatcttca gtgcccggag tgagacgaga aatgcagatg
+541  gtctcagcta tgaacacagc aaaaacaatg aatggaatgg gaaaaggaga agacgtccaa
+601  aagctggcag aagagctgca aagcaacatt ggagtattga gatctcttgg agcaagtcaa
+661  aagaatgggg aaggaattgc aaaggatgta atggaagtgc taaagcagag ctctatggga
+721  aattcagctc ttgtgaagaa atatctaTAA TGctcgaacc atttcagatt ctttcaattt
+781  gttcttttat cttatcagct ctccatttca tggcttggac aatagggcat ttgaatcaaa
+841  taaaaagagg agtaaacatg aaaatacgaa taaaaggtcc aaacaaagag acaataaaca
+901  gagaggtatc aattttgaga cacagttacc aaaaagaaat ccaggccaaa gaaacaatga
+961  aggaagtact ctctgacaac atggaggtat tgagtgacca catagtgatt gaggggcttt
+1021 ctgccgaaga gataataaaa atgggtgaaa cagttttgga gatagaagaa ttgcatTAAa
+1081 ttcaattttt tactgtattt cttattatgc atttaagcaa attgtaatca atgtcagcaa
+1141 ataaactgga a
+</code>
+
+</para>
+
+<para id="ORF-algorithm">
+To get a feel for the process of finding ORFs, go to <link url="http://www.sanger.ac.uk/Software/Artemis">Artemis</link> at the Sanger Institute. If you have Java Web start, you can launch Artemis by clicking <link url="http://www.sanger.ac.uk/Software/Artemis/v9/v9_5/Artemis.jnlp">here</link>. Load the <link url="http://www.nematodes.org/teaching/genomics/Tech4_Gene_finding/clbot.fsa"> clbot.fsa</link> fasta file onto your local machine. Follow the excellent tutorial <link url="http://www.nematodes.org/teaching/genomics/Tech4_Gene_finding/techsession_genefin.html"> here </link> to find ORFs in a simple prokaryotic genome.
+
+
+</para>
+</section>
+
+<section id="eukaryotic-gene-finding">
+<title>Genefinding in eukaryotic genomes </title>
+<para id="eukaryote-gene-finding">
+We now turn to ab initio approaches to gene finding in eukaryotic genomes. They rely on <emphasis> signals </emphasis> which are specific DNA sequences that indicate the  presence of a nearby gene, or <emphasis> content </emphasis> which are statistical properties of the gene itself. Examples of signals include promotor and regulatory sequences that precede a gene, binding sites for the polyA tail at the end of a gene, as well as CpG islands (stretches of DNA with high GC content) that occur before the start of a gene. 
+
+<figure id="eukaryotic_gene"><title>The structure of an eukaryotic gene</title>
+  <media id="idp1025728" alt=""><image src="../../media/eukaryoticGene.gif" mime-type="image/gif" height="300" width="400"/></media>
+  <caption>The structure of an eukaryotic gene (source: unknown).  </caption>
+  </figure>
+
+</para>
+
+<para id="eukarotic-difficulties">
+
+Eukaryotic genes are considerably more complicated than their prokaryotic counterparts. First, a gene is no longer a contiguous stretch of bases between the start codon and a stop codon. It is broken or spliced into coding regions called exons with intervening non-coding sections called introns. Splicing mechanisms in the eukaryotic cell stitch the exons together before translation. Alternative splicing mechanisms allow the exons to be put together in a variety of ways --- thus a single gene can code for a variety of proteins. The one gene - one protein mapping that is characteristic of prokaryotes is lost. Second, most DNA in eukaryotes is non-coding; only about 3% codes for proteins. Finding the exons in a sea of introns and intergenic material is very difficult. In addition, many of the regulatory signals may be quite far from the start codon. These factors make eukaryotic gene finders much less successful than their prokaryotic counterparts like GLIMMER with prediction accuracies of 98%.
+
+
+
+<figure id="psa"><title>The exon-intron structure of the Human PSA gene</title>
+  <media id="idp9944992" alt=""><image src="../../media/psa.gif" mime-type="image/gif" height="300" width="400"/></media>
+  <caption>The exon-intron structure of the Human PSA (source: unknown). The magenta sections are exons embedded in a sea of black introns. </caption>
+  </figure>
+
+</para>
+
+<para id="approach">
+
+Ab initio methods use information embedded in the genomic sequence exclusively to predict gene structure in eukaryotic genes. The problem of gene finding is usually posed as a probabilistic inference problem: find the structure G representing gene boundaries and internal gene structure which maximizes the probability of G given the genomic sequence. Hidden Markov models are the predominant generative method for the problem. Ab-initio methods allow for the prediction of novel genes, genes that are unlike any that are known. However, ab initio techniques are generally not effective in detecting alternately spliced forms, interleaved or overlapping genes. They also have difficulty in accurate identification of exon/intron boundaries. Almost all ab-initio gene finders generate large numbers of false positive predictions arising from learnign overfitted models on small training sets. With these caveats in mind, we embark on the study of Hidden Markov models for finding genes in complex eukaryotic genes.
+</para>
+
+</section>
+
+<section id="cpg">
+<title>A simple example: finding CpG islands </title>
+
+<para id="cpg1">
+Normally a C (cytosine)  followed immediately by a G (guanine)  (a CpG) is rare in eukaryotic DNA because the Cs in such an arrangement tend to be methylated
+<link url="http://en.wikipedia.org/wiki/CpG_island">[Wikipedia]</link>. This methylation helps distinguish the newly synthesized DNA strand from the parent strand, which aids in the final stages of DNA proofreading after duplication. However, over evolutionary time methylated Cs tend to turn into Ts because of spontaneous deamination. The result is that CpGs are relatively rare unless there is selective pressure to preserve them. 
+In bulk human DNA CpG dinucleotides occur about five times less frequently
+than expected (Bird 1980, Jones et al 1992). CpG islands are thus unmethylated regions of the genome
+that are associated with the 5’ ends of most house-keeping genes and many regulated genes. The absence of methylation slows CpG decay, and so CpG islands can be
+detected in DNA sequence as regions in which CpG pairs occur at close to the expected frequency.
+The fact that CpG islands can be detected in this way indicates that the corresponding germline
+DNA has been substantially hypomethylated for an extended period of time, and in fact about 80%
+of CpG islands are common to man and mouse (Antequera and Bird 1993).
+About 56% of human genes and 47% of mouse genes are associated with CpG islands (Antequera and
+Bird 1993). Often CpG islands overlap the promoter and extend about 1000 base pairs downstream
+into the transcription unit. Identification of potential CpG islands during sequence analysis helps
+to define the extreme 5’ ends of genes, something that is notoriously difficult with cDNA based
+approaches.
+
+<figure id="cpg2"><title>CpG Islands</title>
+	<media id="idp10052592" alt=""><image src="../../media/cpg1.gif" mime-type="image/gif"/></media>
+	<caption>CpG islands in the human genome (Chromosome 22, Entrez browser)</caption>
+</figure>
+
+
+</para><para id="element-589">We follow the presentation of the excellent <link url="http://www.amazon.com/Biological-Sequence-Analysis-Probabilistic-Proteins/dp/0521629713">text</link> by Eddy and Durbin, and pose two problems in this context.
+<list id="two-probs">
+<item>Given a short DNA sequence, does it come from a CpG island or not? </item>
+<item>Given a long DNA sequence, identify the CpG islands in that sequence.</item>
+</list></para><para id="element-176">How do we model the problem of recognizing CpG islands? If we look at examples of CpG islands in the human genome (say on Chromosome 22 available from Genbank), you will see that we are unlikely to come with a deterministic set of rules for classifying sequences as being parts of CpG islands or not. We are going to build a probabilistic recognizer; one that takes a sequence and returns a probability that it is part of a CpG island. We will delve into the theory of Markov chains to set up such a model. But before that, here is a brief interlude.</para><para id="element-997">Steve Skiena of SUNY Stony Brook has a very interesting viewpoint on the cultural differences between computer scienctists and biologists. It is a bit of a caricature, but there is a lot of truth in it. Here is his list of contrasts.
+<list id="differences">
+		<item> Almost nothing is ever completely true or false in biology. Everything is either true or false in computer science. </item>
+		<item> Biologists strive to understand the complicated messy natural world. Computer scientists seek to build their own clean and organized virtual worlds. </item>
+		<item> Biologists are data driven. Computer scientists are more algorithm driven. Once consequence is that CS web pages have fancier graphics, while biology web pages have more content. </item>
+		<item> Biologists are obsessed with being the first to discover something. Computer scientists are obsessed with being the first to invent or prove something. </item>
+		<item> Biologists are comfortable with the idea that all data has errors. Computer scientists are not. </item>
+		<item> Computer scientists get high-paid jobs after graduation. Biologists have to complete one or more post-docs before getting a permanent job. </item>
+	</list></para>
+
+<para id="hmm1">
+
+</para>
+
+</section>
+  </content>
+  
+</document>

@@ -1,0 +1,52 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>The structure of the module</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>e99575de-2bd4-4350-a332-b04431a6826a</md:uuid>
+</metadata>
+  <content>
+
+<section id="part1">
+<title> Computational genefinding using Hidden Markov Models </title>
+    <para id="delete_me"><!-- Insert module text here -->
+    The first problem we will study is the annotation of DNA sequences into regions of interest. Our focus is on finding genes that code for proteins. Our approach is to use available annotated DNA sequences to train sequential models, and then to use the trained model to label new DNA segments. We will cover ab initio methods, as well as comparative methods which differ on whether information from other genomes is used as prior information.
+</para>  
+<para id="para-2">Hidden Markov models (HMMs) are the technique of choice for the problem of finding genes in DNA sequences. We will cover the structure of HMMs, the Viterbi algorithm for annotation, the Baum-Welch algorithm for learning models, and pair HMMs to model genefinding in a comparative context. <link url="http://genes.mit.edu/GENSCAN.html">GENSCAN</link>, the paradigmatic example of an ab initio gene finder, will be presented. If time permits, <link url="http://www.genome.org/cgi/content/abstract/13/3/496">SLAM</link>, a comparative gene finder based on pair HMMs will be introduced.
+
+</para> 
+
+<para id="para3">Since gene finding is complex, our exercise for this portion of the course will be to detect CpG islands on <link url="http://www.sanger.ac.uk/HGP/Chr22/">chromosome 22</link>. We will compare the performance of a global decoding methods (Viterbi decoding) against that of a local method (posterior decoding or smoothing). 
+</para>
+</section>
+
+<section id="mol">
+<title> Biomarker discovery and supervised learning </title>
+<para id="element-108">The next problem we will cover is that of molecular fingerprinting of disease. This is also known as the biomarker discovery problem. Given mRNA expression levels, or protein levels from normal and diseased cells, the computational problem is of determining biologically significant genes or proteins  that are differentially expressed. This is usually the first step in generating causal models of disease. This part of the course draws on the pioneering work of <link url="http://www.sciencemag.org/cgi/content/full/286/5439/531">Golub et. al.</link> We will model the problem in the supervised learning framework and introduce k-nearest neighbours and support vector machine classifiers. </para>
+
+<para id="mol2">
+In this section of the course, we will analyse the prostate cancer microarray data set from the Broad institute to build classifiers which discriminate between cancer and normal cells. We will also experiment with various feature selection techniques to identify biologically significant genes that are differentially expressed in diseased cells. We will compare the relative effectiveness of global hyperplane classifiers like support vector machines against local methods as exemplified by k-nearest neighbor classifiers.</para>
+</section>
+
+<section id="network">
+<title> Systems biology and learning Bayesian networks from data </title>
+<para id="network1">The availability of high-throughput data which reveals the levels of mRNA and proteins in cells and their change over time, makes it possible to construct system level models of cellular activity. The inspiration for this part of the course comes from the 2005 study by <link url="http://www.sciencemag.org/cgi/content/full/308/5721/523">Sachs et. al. </link> which uses multi-parameter flow cytometry to reconstruct the T-cell signaling network in humans. The mathematical foundations of Bayesian networks will be covered, as well as the sparse candidate algorithm for learning Bayesian networks from high-throughput data. The use of interventional data to determine causal edges in the network will also be discussed.
+</para>
+
+<para id="network2">
+The experiment for this section of the course is to use Bayesian network algorithms and the flow cytometry data available from the Science website to recreate the Sachs et. al. derivation of the T-cell signaling network.
+</para>
+</section>
+
+<section id="final">
+<title> Summary of course objectives </title>
+<para id="final1">
+This course will teach you 
+<list id="obj-list" list-type="bulleted">
+<item> how to use the underlying biology to constrain feature and model selection. </item>
+<item> how to choose and adapt machine learning algorithms for biological problems.</item>
+<item> how to design learning protocols to deal with incomplete, noisy data. </item>
+<item> how to interpret the results of machine learning algorithms. </item>
+</list>
+</para>
+</section>
+  </content>
+  
+</document>
