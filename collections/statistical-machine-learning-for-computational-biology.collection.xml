@@ -1,3 +1,29 @@
-<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en" type="Course">  <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">  <md:content-id>col10455</md:content-id>  <md:title>Statistical machine learning for computational biology</md:title>      <md:license url="http://creativecommons.org/licenses/by/2.0/">Creative Commons Attribution License 2.0</md:license>  <md:language>en</md:language>      <md:uuid>041eb1d5-6512-489d-81b0-847a8928ab11</md:uuid>
-<md:slug>statistical-machine-learning-for-computational-biology</md:slug>
-</metadata>  <col:content>                        <col:subcollection>        <md:title>Introduction</md:title>                                <col:content>                    <col:module document="m15082"/>                            <col:module document="m15081"/>                          </col:content>      </col:subcollection>                            <col:subcollection>        <md:title>Computational Genefinding</md:title>                                <col:content>                    <col:module document="m11320"/>                            <col:module document="m11416"/>                            <col:module document="m15083"/>                            <col:module document="m15084"/>                          </col:content>      </col:subcollection>      </col:content></col:collection>
+<?xml version="1.0"?>
+<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en" type="Course" authors="Devika Subramanian">
+  <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">
+    <md:content-id>col10455</md:content-id>
+    <md:title>Statistical machine learning for computational biology</md:title>
+    <md:license url="http://creativecommons.org/licenses/by/2.0/">Creative Commons Attribution License 2.0</md:license>
+    <md:language>en</md:language>
+    <md:uuid>041eb1d5-6512-489d-81b0-847a8928ab11</md:uuid>
+    <md:slug>statistical-machine-learning-for-computational-biology</md:slug>
+  </metadata>
+  <col:content>
+    <col:subcollection>
+      <md:title>Introduction</md:title>
+      <col:content>
+        <col:module document="m15082"/>
+        <col:module document="m15081"/>
+      </col:content>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>Computational Genefinding</md:title>
+      <col:content>
+        <col:module document="m11320"/>
+        <col:module document="m11416"/>
+        <col:module document="m15083"/>
+        <col:module document="m15084"/>
+      </col:content>
+    </col:subcollection>
+  </col:content>
+</col:collection>
